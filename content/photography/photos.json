@@ -1,0 +1,223 @@
+[
+  {
+    "slug": "monsoon-01",
+    "src": "/photography/monsoon-01.jpg",
+    "width": 1600,
+    "height": 2000,
+    "caption": "First rain, MG Road.",
+    "folio": "monsoon-2026",
+    "exif": {
+      "dateTaken": "2026-06-14T18:32:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 400,
+      "shutterSpeed": "1/250",
+      "aperture": "f/2.8",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "monsoon-02",
+    "src": "/photography/monsoon-02.jpg",
+    "width": 1600,
+    "height": 1067,
+    "caption": "Reflections outside the old bus stand.",
+    "folio": "monsoon-2026",
+    "exif": {
+      "dateTaken": "2026-06-15T07:10:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 23mm f/2",
+      "iso": 200,
+      "shutterSpeed": "1/500",
+      "aperture": "f/4",
+      "focalLength": "23mm"
+    }
+  },
+  {
+    "slug": "monsoon-03",
+    "src": "/photography/monsoon-03.jpg",
+    "width": 1600,
+    "height": 2133,
+    "caption": "Umbrella, waiting.",
+    "folio": "monsoon-2026",
+    "exif": {
+      "dateTaken": "2026-06-16T17:52:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 320,
+      "shutterSpeed": "1/320",
+      "aperture": "f/2",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "monsoon-04",
+    "src": "/photography/monsoon-04.jpg",
+    "width": 1600,
+    "height": 1067,
+    "caption": "Grey light over the flyover.",
+    "folio": "monsoon-2026",
+    "exif": {
+      "dateTaken": "2026-06-18T18:05:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 23mm f/2",
+      "iso": 400,
+      "shutterSpeed": "1/250",
+      "aperture": "f/4",
+      "focalLength": "23mm"
+    }
+  },
+  {
+    "slug": "puja-01",
+    "src": "/photography/puja-01.jpg",
+    "width": 1600,
+    "height": 2000,
+    "caption": "Pandal lights, night one.",
+    "folio": "durga-puja-2025",
+    "exif": {
+      "dateTaken": "2025-10-01T21:14:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 1600,
+      "shutterSpeed": "1/125",
+      "aperture": "f/1.4",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "puja-02",
+    "src": "/photography/puja-02.jpg",
+    "width": 1600,
+    "height": 1067,
+    "caption": "Crowd, blur, colour.",
+    "folio": "durga-puja-2025",
+    "exif": {
+      "dateTaken": "2025-10-02T22:40:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 23mm f/2",
+      "iso": 3200,
+      "shutterSpeed": "1/60",
+      "aperture": "f/2",
+      "focalLength": "23mm"
+    }
+  },
+  {
+    "slug": "puja-03",
+    "src": "/photography/puja-03.jpg",
+    "width": 1600,
+    "height": 2133,
+    "caption": "Idol, close.",
+    "folio": "durga-puja-2025",
+    "exif": {
+      "dateTaken": "2025-10-03T20:05:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 800,
+      "shutterSpeed": "1/160",
+      "aperture": "f/1.8",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "grid-01",
+    "src": "/photography/grid-01.jpg",
+    "width": 1600,
+    "height": 1600,
+    "caption": "Stairwell, afternoon.",
+    "folio": null,
+    "exif": {
+      "dateTaken": "2026-03-02T14:22:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 200,
+      "shutterSpeed": "1/500",
+      "aperture": "f/2.8",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "grid-02",
+    "src": "/photography/grid-02.jpg",
+    "width": 1600,
+    "height": 1600,
+    "caption": "Server room, 2am.",
+    "folio": null,
+    "exif": {
+      "dateTaken": "2026-02-11T02:03:00+05:30",
+      "camera": "iPhone 15 Pro",
+      "lens": "iPhone 15 Pro back triple camera 6.765mm f/1.78",
+      "iso": 800,
+      "shutterSpeed": "1/30",
+      "aperture": "f/1.8",
+      "focalLength": "24mm"
+    }
+  },
+  {
+    "slug": "grid-03",
+    "src": "/photography/grid-03.jpg",
+    "width": 1600,
+    "height": 1600,
+    "caption": "Chai stall, 7am.",
+    "folio": null,
+    "exif": {
+      "dateTaken": "2026-01-19T07:04:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 23mm f/2",
+      "iso": 320,
+      "shutterSpeed": "1/250",
+      "aperture": "f/4",
+      "focalLength": "23mm"
+    }
+  },
+  {
+    "slug": "grid-04",
+    "src": "/photography/grid-04.jpg",
+    "width": 1600,
+    "height": 1600,
+    "caption": "Rooftop, sunset.",
+    "folio": null,
+    "exif": {
+      "dateTaken": "2025-12-28T18:12:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 100,
+      "shutterSpeed": "1/1000",
+      "aperture": "f/4",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "grid-05",
+    "src": "/photography/grid-05.jpg",
+    "width": 1600,
+    "height": 1600,
+    "caption": "Old lens, new light.",
+    "folio": null,
+    "exif": {
+      "dateTaken": "2025-12-05T16:40:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 35mm f/1.4",
+      "iso": 200,
+      "shutterSpeed": "1/640",
+      "aperture": "f/2",
+      "focalLength": "35mm"
+    }
+  },
+  {
+    "slug": "grid-06",
+    "src": "/photography/grid-06.jpg",
+    "width": 1600,
+    "height": 1600,
+    "caption": "Empty platform.",
+    "folio": null,
+    "exif": {
+      "dateTaken": "2025-11-20T05:58:00+05:30",
+      "camera": "Fujifilm X-T5",
+      "lens": "XF 23mm f/2",
+      "iso": 640,
+      "shutterSpeed": "1/200",
+      "aperture": "f/2.8",
+      "focalLength": "23mm"
+    }
+  }
+]

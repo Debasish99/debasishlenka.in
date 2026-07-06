@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "windows-server",
+    "name": "Windows Server",
+    "summary": "Designing and running Windows Server environments — from single-box deployments to multi-site infrastructure.",
+    "keywords": ["Server 2016–2022", "Group Policy", "DNS/DHCP", "Patch management", "High availability"]
+  },
+  {
+    "slug": "active-directory",
+    "name": "Active Directory",
+    "summary": "Identity is the foundation everything else sits on. Domain design, trust relationships, and getting the boring stuff airtight.",
+    "keywords": ["Multi-domain forests", "GPO design", "AD security hardening", "Migrations", "Hybrid identity"]
+  },
+  {
+    "slug": "linux",
+    "name": "Linux",
+    "summary": "Comfortable across distributions, from a single hardened box to fleets managed at scale.",
+    "keywords": ["RHEL / Ubuntu / Debian", "Shell scripting", "systemd", "Networking", "Automation"]
+  },
+  {
+    "slug": "azure-cloud",
+    "name": "Azure Cloud",
+    "summary": "Moving workloads to the cloud without moving the problems with them — architecture that's actually maintainable.",
+    "keywords": ["Azure AD / Entra ID", "VMs & networking", "Cost optimization", "Hybrid cloud", "IaC"]
+  },
+  {
+    "slug": "vmware",
+    "name": "VMware",
+    "summary": "Virtualization infrastructure that stays boring in the best way — predictable, resilient, easy to hand off.",
+    "keywords": ["vSphere / ESXi", "Cluster design", "Storage & networking", "DR planning", "Capacity management"]
+  }
+]

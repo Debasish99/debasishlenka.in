@@ -1,0 +1,38 @@
+{
+  "name": "Debasish Lenka",
+  "title": "Systems & Cloud Infrastructure Engineer",
+  "summary": "Infrastructure engineer with hands-on experience designing, running, and hardening Windows Server, Active Directory, Linux, Azure, and VMware environments. Comfortable owning systems end-to-end — from architecture decisions down to the 2am pager alert.",
+  "experience": [
+    {
+      "role": "Systems Engineer",
+      "company": "Company Name",
+      "period": "20XX — Present",
+      "bullets": [
+        "Managed multi-domain Active Directory forest supporting N users across N sites, including GPO design and security hardening",
+        "Administered VMware vSphere clusters (N hosts, N VMs) with a focus on capacity planning and disaster recovery",
+        "Led migration of on-prem workloads to Azure, reducing infrastructure costs by N% while improving availability",
+        "Automated routine operations (patching, backups, monitoring) using PowerShell and Bash, cutting manual effort by N hours/month"
+      ]
+    },
+    {
+      "role": "Systems Administrator",
+      "company": "Previous Company Name",
+      "period": "20XX — 20XX",
+      "bullets": [
+        "Administered Windows Server environment including DNS, DHCP, and file/print services",
+        "Maintained Linux servers (RHEL/Ubuntu) supporting internal applications",
+        "Provided tier 2/3 support for infrastructure incidents"
+      ]
+    }
+  ],
+  "skills": [
+    { "group": "Windows Server", "items": ["Server 2016–2022", "Group Policy", "DNS/DHCP", "Patch management", "High availability"] },
+    { "group": "Active Directory", "items": ["Multi-domain forests", "GPO design", "AD security hardening", "Migrations", "Hybrid identity"] },
+    { "group": "Linux", "items": ["RHEL / Ubuntu / Debian", "Shell scripting", "systemd", "Networking", "Automation"] },
+    { "group": "Azure Cloud", "items": ["Azure AD / Entra ID", "VMs & networking", "Cost optimization", "Hybrid cloud", "IaC"] },
+    { "group": "VMware", "items": ["vSphere / ESXi", "Cluster design", "Storage & networking", "DR planning", "Capacity management"] }
+  ],
+  "education": [
+    { "degree": "Degree Name", "institution": "Institution Name", "period": "20XX — 20XX" }
+  ]
+}

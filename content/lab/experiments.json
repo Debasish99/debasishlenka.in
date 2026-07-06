@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "this-site",
+    "title": "This site",
+    "status": "ongoing",
+    "summary": "debasishlenka.in itself — designed and built with heavy AI assistance, as an infra engineer learning to think like a builder.",
+    "tags": ["Next.js", "Tailwind", "Vercel", "Vibe coding"],
+    "coverImage": null,
+    "video": null,
+    "links": [
+      { "label": "View source", "url": "https://github.com/Debasish99/debasishlenka.in" }
+    ],
+    "body": [
+      "This entire site — the one you're looking at right now — is the first real vibe-coding project on this list.",
+      "Built almost entirely through conversation: describing what I wanted, reviewing what came back, and iterating, rather than writing every line by hand. As an infrastructure engineer by trade, this has been a genuinely new way of building something.",
+      "More detail on how it came together will land here and on the blog as the project continues."
+    ]
+  },
+  {
+    "slug": "vibe-coding-log",
+    "title": "Vibe coding log",
+    "status": "ongoing",
+    "summary": "A running log of small tools and experiments built by describing what I want rather than writing every line.",
+    "tags": ["Various"],
+    "coverImage": null,
+    "video": null,
+    "links": [],
+    "body": [
+      "This entry is a placeholder for an ongoing log — as new experiments happen, they'll get their own entries here, or this one gets updated directly.",
+      "Future entries can include a cover image, a demo video, and links to source code or a live version — just fill in the matching fields in content/lab/experiments.json (see README-lab.md for exact instructions)."
+    ]
+  }
+]

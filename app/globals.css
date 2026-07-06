@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * DESIGN TOKENS — from "00 - Design Direction"
+ * ----------------------------------------------------------------
+ * Components consume these variables (via tailwind.config.ts), never
+ * raw hex codes, so future palette tweaks only happen here.
+ */
+:root {
+  /* Color */
+  --color-background: #0A0A0A;
+  --color-background-raised: #141414;
+  --color-background-raised-2: #1C1C1A;
+  --color-foreground: #F5F4F0;
+  --color-muted: #9B9994;
+  --color-muted-faint: #5C5A55;
+  --color-muted-bg: #141414;
+  --color-accent: #FF6B35;
+  --color-accent-dim: #B84E27;
+  --color-border: #232320;
+
+  /* Type */
+  --font-display: 'Clash Display', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout */
+  --container-max: 72rem;
+  --gutter: 1.5rem;
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: var(--font-body);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
