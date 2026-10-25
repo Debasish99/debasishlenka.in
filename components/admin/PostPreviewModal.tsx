@@ -1,7 +1,8 @@
 "use client";
 
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
-import { Img } from "@/components/blog/Img";
+import { mdxComponents } from "@/components/blog/mdxComponents";
+import { PROSE_CLASSES } from "@/lib/blog/mdxOptions";
 
 type Props = {
   title: string;
@@ -11,7 +12,34 @@ type Props = {
   onClose: () => void;
 };
 
-export function PostPreviewModal({ title, date, tags, source, onClose }: Props) {
+/** The rendered post (header + body) — shared by the modal and the live split pane. */
+export function PostPreviewBody({
+  title,
+  date,
+  tags,
+  source,
+}: Omit<Props, "onClose">) {
+  return (
+    <>
+      <p className="font-mono text-xs text-text-faint">{date || "—"}</p>
+      <h1 className="mt-2 font-display text-4xl leading-[1.05] text-text md:text-5xl">
+        {title || "Untitled post"}
+      </h1>
+      <div className="mt-4 flex flex-wrap gap-3">
+        {tags.map((tag) => (
+          <span key={tag} className="font-mono text-xs text-text-faint">
+            #{tag}
+          </span>
+        ))}
+      </div>
+      <div className={`${PROSE_CLASSES} mt-10`}>
+        <MDXRemote {...source} components={mdxComponents} />
+      </div>
+    </>
+  );
+}
+
+export function PostPreviewModal({ onClose, ...rest }: Props) {
   return (
     <div
       className="fixed inset-0 z-[100] overflow-y-auto bg-background/95 backdrop-blur-sm"
@@ -29,22 +57,7 @@ export function PostPreviewModal({ title, date, tags, source, onClose }: Props) 
             Close ✕
           </button>
         </div>
-
-        <p className="font-mono text-xs text-text-faint">{date || "—"}</p>
-        <h1 className="mt-2 font-display text-4xl leading-[1.05] text-text md:text-5xl">
-          {title || "Untitled post"}
-        </h1>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {tags.map((tag) => (
-            <span key={tag} className="font-mono text-xs text-text-faint">
-              #{tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-a:text-accent prose-img:rounded-md">
-          <MDXRemote {...source} components={{ Img }} />
-        </div>
+        <PostPreviewBody {...rest} />
       </div>
     </div>
   );

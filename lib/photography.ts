@@ -55,6 +55,24 @@ export function getPhotosByFolio(slug: string): Photo[] {
   return getAllPhotos().filter((p) => p.folio === slug);
 }
 
+/**
+ * Returns the previous/next photo slugs for modal navigation.
+ * If `context` (a folio slug) is given, navigation stays within that
+ * folio's sequence; otherwise it walks the full site-wide chronological list.
+ */
+export function getPhotoNav(
+  slug: string,
+  context?: string | null
+): { prev: string | null; next: string | null } {
+  const list = context ? getPhotosByFolio(context) : getAllPhotos();
+  const index = list.findIndex((p) => p.slug === slug);
+  if (index === -1) return { prev: null, next: null };
+  return {
+    prev: index > 0 ? list[index - 1].slug : null,
+    next: index < list.length - 1 ? list[index + 1].slug : null,
+  };
+}
+
 /** Formats EXIF shutter/ISO/aperture into a single readable line. */
 export function formatExifLine(exif: PhotoExif): string {
   const parts = [

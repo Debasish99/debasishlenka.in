@@ -45,3 +45,14 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Syntax highlighting (rehype-highlight / highlight.js classes) — palette-matched */
+.hljs { color: #f5f4f0; }
+.hljs-comment, .hljs-quote { color: #5c5a55; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-doctag { color: #ff6b35; }
+.hljs-string, .hljs-regexp, .hljs-addition { color: #a8c98a; }
+.hljs-number, .hljs-symbol, .hljs-bullet { color: #e8b86d; }
+.hljs-title, .hljs-section, .hljs-title.function_, .hljs-name { color: #7fb2e5; }
+.hljs-built_in, .hljs-type, .hljs-class .hljs-title, .hljs-title.class_ { color: #d9a6e8; }
+.hljs-attr, .hljs-attribute, .hljs-variable, .hljs-template-variable, .hljs-params { color: #9b9994; }
+.hljs-meta, .hljs-deletion { color: #e57f7f; }

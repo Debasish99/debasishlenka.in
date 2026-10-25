@@ -123,16 +123,16 @@
     "src": "/photography/grid-01.jpg",
     "width": 1600,
     "height": 1600,
-    "caption": "Stairwell, afternoon.",
+    "caption": "Behind closed doors, an open mind.",
     "folio": null,
     "exif": {
-      "dateTaken": "2026-03-02T14:22:00+05:30",
-      "camera": "Fujifilm X-T5",
-      "lens": "XF 35mm f/1.4",
-      "iso": 200,
-      "shutterSpeed": "1/500",
-      "aperture": "f/2.8",
-      "focalLength": "35mm"
+      "dateTaken": "2025-09-14T13:34:00+05:30",
+      "camera": "Nikon D3400",
+      "lens": "50mm f/1.8",
+      "iso": 100,
+      "shutterSpeed": "1/1250",
+      "aperture": "f/1.8",
+      "focalLength": "50mm"
     }
   },
   {
@@ -140,16 +140,16 @@
     "src": "/photography/grid-02.jpg",
     "width": 1600,
     "height": 1600,
-    "caption": "Server room, 2am.",
+    "caption": "Echoes of the past.",
     "folio": null,
     "exif": {
-      "dateTaken": "2026-02-11T02:03:00+05:30",
-      "camera": "iPhone 15 Pro",
-      "lens": "iPhone 15 Pro back triple camera 6.765mm f/1.78",
-      "iso": 800,
-      "shutterSpeed": "1/30",
+      "dateTaken": "2026-09-14T13:31:00+05:30",
+      "camera": "Nikon D3400",
+      "lens": "50mm f/1.8",
+      "iso": 100,
+      "shutterSpeed": "1/1250",
       "aperture": "f/1.8",
-      "focalLength": "24mm"
+      "focalLength": "50mm"
     }
   },
   {
@@ -157,16 +157,16 @@
     "src": "/photography/grid-03.jpg",
     "width": 1600,
     "height": 1600,
-    "caption": "Chai stall, 7am.",
+    "caption": "Finding comfort in chaos.",
     "folio": null,
     "exif": {
-      "dateTaken": "2026-01-19T07:04:00+05:30",
-      "camera": "Fujifilm X-T5",
-      "lens": "XF 23mm f/2",
-      "iso": 320,
-      "shutterSpeed": "1/250",
-      "aperture": "f/4",
-      "focalLength": "23mm"
+      "dateTaken": "2025-09-14T13:26:00+05:30",
+      "camera": "Nikon D3400",
+      "lens": "50mm f/1.8",
+      "iso": 100,
+      "shutterSpeed": "1/1600",
+      "aperture": "f/1.8",
+      "focalLength": "50mm"
     }
   },
   {
@@ -174,16 +174,16 @@
     "src": "/photography/grid-04.jpg",
     "width": 1600,
     "height": 1600,
-    "caption": "Rooftop, sunset.",
+    "caption": "A quite corner in a loud city.",
     "folio": null,
     "exif": {
-      "dateTaken": "2025-12-28T18:12:00+05:30",
-      "camera": "Fujifilm X-T5",
-      "lens": "XF 35mm f/1.4",
+      "dateTaken": "2025-09-14T14:50:00+05:30",
+      "camera": "Nikon D3400",
+      "lens": "50mm f/1.8",
       "iso": 100,
-      "shutterSpeed": "1/1000",
-      "aperture": "f/4",
-      "focalLength": "35mm"
+      "shutterSpeed": "1/400",
+      "aperture": "f/1.8",
+      "focalLength": "50mm"
     }
   },
   {
@@ -191,16 +191,16 @@
     "src": "/photography/grid-05.jpg",
     "width": 1600,
     "height": 1600,
-    "caption": "Old lens, new light.",
+    "caption": "Frame with in a frame.",
     "folio": null,
     "exif": {
-      "dateTaken": "2025-12-05T16:40:00+05:30",
-      "camera": "Fujifilm X-T5",
-      "lens": "XF 35mm f/1.4",
+      "dateTaken": "2025-09-14T14:12:00+05:30",
+      "camera": "Nikon D3400",
+      "lens": "50mm f/1.8",
       "iso": 200,
-      "shutterSpeed": "1/640",
-      "aperture": "f/2",
-      "focalLength": "35mm"
+      "shutterSpeed": "1/100",
+      "aperture": "f/1.8",
+      "focalLength": "50mm"
     }
   },
   {
@@ -208,16 +208,16 @@
     "src": "/photography/grid-06.jpg",
     "width": 1600,
     "height": 1600,
-    "caption": "Empty platform.",
+    "caption": "Lost.",
     "folio": null,
     "exif": {
-      "dateTaken": "2025-11-20T05:58:00+05:30",
-      "camera": "Fujifilm X-T5",
-      "lens": "XF 23mm f/2",
-      "iso": 640,
+     "dateTaken": "2025-09-14T14:19:00+05:30",
+      "camera": "Nikon D3200",
+      "lens": "55mm f/3.5",
+      "iso": 1600,
       "shutterSpeed": "1/200",
-      "aperture": "f/2.8",
-      "focalLength": "23mm"
+      "aperture": "f/5.0",
+      "focalLength": "34mm"
     }
   }
 ]

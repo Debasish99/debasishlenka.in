@@ -16,6 +16,12 @@ export default function BlogIndexPage() {
         title="Blog"
         description="Notes on infrastructure, photography, and building this site."
       />
+      <a
+        href="/feed.xml"
+        className="mt-4 inline-block font-mono text-xs uppercase tracking-wide text-text-faint transition-colors hover:text-accent"
+      >
+        RSS feed →
+      </a>
       <ul className="mt-16 divide-y divide-border">
         {posts.map((post) => (
           <li key={post.frontmatter.slug} className="py-8">

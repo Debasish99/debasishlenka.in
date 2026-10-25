@@ -41,7 +41,7 @@ export default function FolioPage({ params }: { params: { folio: string } }) {
         {photos.map((photo) => (
           <figure key={photo.slug} className="flex flex-col gap-3">
             <Link
-              href={`/photography/photo/${photo.slug}`}
+              href={`/photography/photo/${photo.slug}?context=${folio.slug}`}
               scroll={false}
               className="relative block aspect-[3/2] w-full overflow-hidden bg-bg-raised"
             >

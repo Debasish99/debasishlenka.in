@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 import { serialize } from "next-mdx-remote/serialize";
 import { isAuthenticated } from "@/lib/admin/auth";
+import { mdxOptions } from "@/lib/blog/mdxOptions";
 
 /**
- * Renders draft post content through the exact same MDX pipeline the
- * live blog uses, so the preview isn't an approximation — it's the
- * real thing, just not saved anywhere yet.
+ * Renders draft content through the same MDX pipeline (incl. tables and
+ * code highlighting) the live blog uses, so the preview is the real thing.
  */
 export async function POST(request: Request) {
   if (!isAuthenticated()) {
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   }
   try {
     const { content } = await request.json();
-    const source = await serialize(content || "");
+    const source = await serialize(content || "", { mdxOptions });
     return NextResponse.json({ source });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);

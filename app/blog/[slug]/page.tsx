@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Container } from "@/components/ui/Container";
-import { Img } from "@/components/blog/Img";
 import { getAllPosts, getPostBySlug } from "@/lib/blog/posts";
 import { site } from "@/lib/constants";
+import { mdxOptions, PROSE_CLASSES } from "@/lib/blog/mdxOptions";
+import { mdxComponents } from "@/components/blog/mdxComponents";
 
 type Props = { params: { slug: string } };
 
@@ -87,16 +88,11 @@ export default function BlogPostPage({ params }: Props) {
           </Link>
         ))}
       </div>
-      <div className="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-a:text-accent prose-img:rounded-md">
+      <div className={`${PROSE_CLASSES} mt-10`}>
         <MDXRemote
           source={post.content}
-          components={{
-            img: (props) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img {...props} alt={props.alt ?? ""} loading="lazy" className="w-full rounded" />
-            ),
-            Img,
-          }}
+          options={{ mdxOptions }}
+          components={mdxComponents}
         />
       </div>
     </Container>

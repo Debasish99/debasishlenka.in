@@ -229,3 +229,53 @@ Lab was previously just a flat list of cards going nowhere — clicking did noth
 
 ### Not independently re-verified
 The photo modal scroll-lock fix uses a well-established, widely-documented technique for this exact class of mobile browser bug — I'm confident in the approach, but I don't have a way to test real mobile Safari/Chrome touch-scroll behavior from this sandbox. If it's still not perfect on your phone after this update, tell me exactly what you see and we'll iterate further.
+
+---
+
+## Polish batch: photo navigation, RSS, login rate limiting (added)
+
+### Photo modal prev/next navigation
+- Arrow keys (← →), on-screen arrow buttons, and swipe left/right on mobile all move between photos without closing the modal
+- Browsing the main `/photography` grid: navigation follows the full chronological photo list
+- Browsing from inside a folio (e.g. `/photography/monsoon-2026`): navigation stays within that folio's photos only, via a `?context=<folio-slug>` URL parameter
+- The full-page fallback (`/photography/photo/[slug]`, used for direct links/shares) also got Previous/Next links at the bottom, same logic
+
+### RSS feed
+- `/feed.xml` — real RSS 2.0 feed of all published (non-draft) posts
+- Linked in page `<head>` metadata for feed reader auto-discovery, plus a visible "RSS feed →" link on the `/blog` page itself
+
+### Admin login rate limiting
+Vercel functions are serverless, so an in-memory failed-attempt counter would reset on every cold start and not actually protect anything. Instead, failed attempts are tracked in a signed, httpOnly cookie (same signing approach as the session cookie) — this survives across serverless invocations without needing a database.
+- 5 failed attempts within 15 minutes triggers a lockout
+- **During lockout, even the correct password is rejected** — I verified this specifically, since a rate limiter that still accepts the right password during "lockout" isn't actually protecting anything
+- Successful login clears the counter
+
+### Verified (real production server, not dev mode)
+- RSS feed: confirmed real XML with correct content-type and all 3 current posts present
+- Photo nav: confirmed folio-context navigation stays within the folio (tested monsoon-02 → prev/next correctly resolve to monsoon-01/03), and default navigation correctly walks the full site-wide list when no folio context
+- Rate limiting: ran 6 consecutive login attempts against a live server — confirmed the countdown message decrements correctly (4, 3, 2, 1 remaining), lockout triggers exactly at attempt 5, and — critically — attempt 6 with the **correct** password still gets rejected with 429 while locked out. Also confirmed a fresh, non-locked-out session logs in normally on the first correct attempt.
+
+---
+
+## v0.2 — Blog editor upgrade
+
+**Writing tools (admin → New post / Edit post)**
+- Formatting toolbar: Bold, Italic, H2, H3, Quote, bullet / numbered / task lists, inline code, code block (asks for a language), Table, Divider, Link, YouTube embed, plus the existing image insert with size/alignment
+- Shortcuts: Ctrl/Cmd+B bold, +I italic, +K link, +S save
+- Paste or drag an image straight into the writing box to upload it
+- Live preview (side by side, desktop) — re-renders as you type using the same renderer as the real site; the existing "Full preview" is still there
+- Autosave: your draft is kept in this browser while you type; if the tab closes or crashes you get a "Restore it / Discard" banner next time. Browser also warns before closing with unsaved changes.
+- Live word count + reading time, URL preview under the slug, excerpt length counter (160 chars), and one-click suggestions of tags you've already used
+
+**Rendering (live site + preview, identical)**
+- Tables, task lists, strikethrough, auto-linked URLs (GitHub-flavoured Markdown)
+- Syntax-highlighted code blocks in the site palette — including **PowerShell**, batch/cmd, nginx and Dockerfile on top of bash, yaml, json, python, sql etc.
+- `<YouTube id="..." />` responsive embed
+- Wide tables scroll sideways on phones instead of breaking the layout
+- Inline `code` no longer shows literal backtick characters
+
+**Also included:** the photo-modal Close button is back on `router.back()` (the earlier `replace()` attempt broke dismissal).
+
+**Gotcha when writing:** in plain text, `{ }` and `< >` are treated as MDX code. Put them in backticks (`like this`) or in a code block. The live preview shows an "Can't render yet" message if you slip.
+
+**To install:** unzip → `npm install` (new packages: remark-gfm, rehype-highlight) → add your `.env.local` → `npm run dev`.

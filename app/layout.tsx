@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     title: site.name,
     description: site.description,
   },
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
