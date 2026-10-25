@@ -1,0 +1,57 @@
+---
+title: Understanding Auto Scaling Group in AWS
+date: '2026-10-25'
+tags:
+  - AWS
+draft: false
+---
+The load on your website or application can vary over time or depends upon the situation for an e-commerce website could face more load during a sale or a festival rather than on any normal day.
+
+But the underlying architecture for your application/website can't be changed instantly if you are in legacy architectures like owning your physical servers. Hence as legacy traditions, you tend to purchase more capacity (CPU, Storage, Memory etc) upfront to be prepared for these load periods.
+
+But the load periods are not regular for any website or applications, Hence you end up paying upfront for the times even when you are not using it. Imagine a small start-up having to own big servers and not using the full power of it most of the time. This leads to the loss of your money and resources.
+
+But in cloud (AWS, Azure, Google etc) environments you pay only for the resources you use and for the duration you use them. To explain this more, Let me explain the pay-as-you-go model of the AWS cloud.
+
+Pay-as-you-go cloud computing (PAYG cloud computing) is a payment method for cloud computing that charges based on usage. The practice is similar to that of utility bills, using only resources that are needed.
+
+One major benefit of the pay-as-you-go model, which is a form of consumption-based pricing, is that there are no wasted resources. Users only pay for what they use rather than a certain amount of resources that may or may not be used. With traditional enterprise design, users architect data storage to handle the maximum workload. But with the public cloud, the pay-as-you-go method charges the organization only for what it stores, provisions or uses
+
+Hence to support this we have a feature in the AWS cloud called **Auto Scaling Group,** Let's see what we can achieve using auto-scaling group
+
+Taking back to our previous scenario, we wanted a solution that could help us add more capacity when required and also remove the capacity/resources when we don't require them any longer. In this way, we can save the underutilized resources and save money by not paying for them.
+
+
+The goal of an Auto Scaling Group (ASG) is to :
+
+* Scale-out (add EC2 instances) to match an increased load
+    
+* Scale in (remove EC2 instances) to  match a decreased load
+    
+* Ensure we have a minimum and maximum number of EC2 instances running
+    
+* Automatically register new instances to a load balancer
+    
+* Re-Create an EC2 instance in case a previous one is terminated (ex: If unhealthy)
+    
+
+ASG is free (You only pay for the underlying EC2 instances)
+
+
+How ASG works:
+
+Minimum capacity: It's how many EC2 instances you want in your ASG to be present at least, the ASG will not scale in beyond it.
+
+Desired Capacity: It's how many EC2 instances you want in your ASG.
+
+Maximum capacity: It's how many instances you want in your ASG at maximum, the ASG will not scale out beyond it.
+
+Suppose your application needs more load at any instance the ASG will automatically add more instances to the ASG as per the load.
+
+The ASG will also work with a Load balancer so that your users can have a load-balanced website.
+
+The load balancer has a health check feature that will check the health of the instances and the report will be shared with ASG as well, if there is any unhealthy instance then the ASG will add a new instance in place of the unhealthy instance.
+
+A Launch template is a template that helps ASG to launch EC2 instances as per your requirements,
+
+That's it for ASG, I hope you liked it.
