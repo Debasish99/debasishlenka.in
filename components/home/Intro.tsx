@@ -8,18 +8,17 @@ export default function Intro() {
         The short version
       </span>
       <h2 className="font-display font-semibold leading-[1.05] tracking-[-0.015em] text-[clamp(1.75rem,4vw,3rem)] max-w-[18ch] mb-8">
-        Windows, Linux, Azure — and everything in between
+        Everything in between
       </h2>
       <div className="max-w-[55ch] space-y-5 text-lg leading-[1.7]">
         <p>
-          I&apos;ve spent over a decade keeping systems alive that most people never
-          think about until they break — Active Directory forests, Windows Server
-          fleets, Linux boxes, VMware clusters, and increasingly, Azure.
+          I work in IT to make a living. The rest? That&apos;s where things get interesting.
+          Most days, you&apos;ll find me jumping between Windows servers, Active Directory, Azure dashboards, vCenter consoles, PowerShell scripts and whatever new technology has managed to grab my attention. Sometimes it&apos;s troubleshooting something that worked perfectly yesterday. Other times, it&apos;s figuring out something new just because I can. There&apos;s always something to fix, something to learn or something that refuses to work for absolutely no reason.
+         
         </p>
         <p className="text-text-muted">
-          Outside of that, I shoot photos, build small things with code just to see
-          if I can, and write about whichever of the two is currently eating my
-          attention. This site is where all of it lives in one place.
+          When I&apos;m not doing that, I&apos;m probably behind a camera, lost in a fiction book, watching some new anime or TV series, Writing a blog post or emptying my mind out on my journal, messing around some code or falling down another rabbit hole of things I didn&apos;t plan to get into. The list goes on. My attention span has hobbies of its own.
+          This is my little corner of the internet. Things I work on, things I create, and bits of me that don&apos;t fit into a job title.
         </p>
       </div>
     </section>
