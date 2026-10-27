@@ -22,6 +22,13 @@ const worlds = [
     cta: "Poke around",
     href: "/lab",
   },
+  {
+    tag: "Write",
+    title: "Blog",
+    copy: "Notes on infrastructure, cloud, and whatever I'm learning — written down so I don't forget it.",
+    cta: "Read the posts",
+    href: "/blog",
+  },
 ];
 
 export default function WorldsNav() {
@@ -34,7 +41,7 @@ export default function WorldsNav() {
         <div className="flex-1 h-px bg-border" />
       </div>
 
-      <div className="grid md:grid-cols-3 gap-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {worlds.map((world) => (
           <Link
             key={world.title}

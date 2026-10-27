@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta, shareImage } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
@@ -16,7 +17,16 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: Props): Metadata {
   const photo = getPhoto(params.slug);
-  return { title: photo ? photo.caption : "Photo" };
+  if (!photo) return { title: "Photo" };
+  const settings = [photo.exif.camera, photo.exif.aperture, photo.exif.shutterSpeed && `${photo.exif.shutterSpeed}s`, photo.exif.iso && `ISO ${photo.exif.iso}`]
+    .filter(Boolean)
+    .join(" · ");
+  return pageMeta({
+    title: photo.caption || "Photo",
+    description: settings ? `${photo.caption} — ${settings}.` : photo.caption,
+    path: `/photography/photo/${photo.slug}`,
+    image: shareImage(photo.src),
+  });
 }
 
 function hrefFor(slug: string, context?: string) {

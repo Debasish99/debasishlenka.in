@@ -55,7 +55,12 @@ export default function BlogPostPage({ params }: Props) {
     headline: post.frontmatter.title,
     description: post.frontmatter.excerpt,
     datePublished: post.frontmatter.date,
-    author: { "@type": "Person", name: site.name },
+    dateModified: post.frontmatter.date,
+    author: { "@type": "Person", name: site.name, url: `https://${site.domain}` },
+    publisher: { "@type": "Person", name: site.name },
+    image: `https://${site.domain}/blog/${post.frontmatter.slug}/opengraph-image`,
+    keywords: post.frontmatter.tags.join(", "),
+    mainEntityOfPage: `https://${site.domain}/blog/${post.frontmatter.slug}`,
     url: `https://${site.domain}/blog/${post.frontmatter.slug}`,
   };
 

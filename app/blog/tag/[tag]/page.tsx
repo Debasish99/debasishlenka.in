@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -13,7 +14,11 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 export function generateMetadata({ params }: Props): Metadata {
-  return { title: `#${params.tag}` };
+  return pageMeta({
+    title: `#${params.tag}`,
+    description: `Blog posts tagged ${params.tag}.`,
+    path: `/blog/tag/${params.tag}`,
+  });
 }
 
 export default function BlogTagPage({ params }: Props) {

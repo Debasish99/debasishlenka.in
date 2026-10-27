@@ -79,7 +79,13 @@ export function PhotoModal({ children, prevHref, nextHref }: Props) {
       onTouchEnd={onTouchEnd}
     >
       <button
-        onClick={close}
+        onClick={(e) => {
+          // The overlay behind this button also closes on click. Without
+          // stopPropagation the click fires close() twice -> two history
+          // steps back -> you skip past /photography and land on the page before it.
+          e.stopPropagation();
+          close();
+        }}
         aria-label="Close"
         className="fixed right-4 top-4 z-[110] font-mono text-xs uppercase tracking-wide text-text-muted transition-colors hover:text-text sm:right-8 sm:top-8"
       >

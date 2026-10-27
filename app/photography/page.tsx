@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FolioCard } from "@/components/photography/FolioCard";
 import { PhotoGrid } from "@/components/photography/PhotoGrid";
 import { getAllPhotos, getFolios } from "@/lib/photography";
 
-export const metadata: Metadata = { title: "Photography" };
+export const metadata: Metadata = pageMeta({
+  title: "Photography",
+  description:
+    "Unscripted street and everyday photography — curated folios and a running archive of everything I shoot.",
+  path: "/photography",
+});
 
 export default function PhotographyPage() {
   const folios = getFolios();

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta, shareImage } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,7 +14,13 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: Props): Metadata {
   const experiment = getExperiment(params.slug);
-  return { title: experiment ? experiment.title : "Lab" };
+  if (!experiment) return { title: "Lab" };
+  return pageMeta({
+    title: experiment.title,
+    description: experiment.summary,
+    path: `/lab/${experiment.slug}`,
+    image: experiment.coverImage ? shareImage(experiment.coverImage) : undefined,
+  });
 }
 
 const statusColor: Record<string, string> = {

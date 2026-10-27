@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DomainCard } from "@/components/work/DomainCard";
 import { getDomains } from "@/lib/work";
 
-export const metadata: Metadata = { title: "Work" };
+export const metadata: Metadata = pageMeta({
+  title: "Work",
+  description:
+    "Windows Server, Active Directory, Linux, Azure and VMware engineering — infrastructure work that keeps things quietly running.",
+  path: "/work",
+});
 
 export default function WorkPage() {
   const domains = getDomains();

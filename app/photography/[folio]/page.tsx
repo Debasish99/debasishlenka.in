@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { pageMeta, shareImage } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { formatExifDate, formatExifLine, getFolio, getFolios, getPhotosByFolio } from "@/lib/photography";
+import { formatExifDate, formatExifLine, getFolio, getFolios, getPhoto, getPhotosByFolio } from "@/lib/photography";
 
 export function generateStaticParams() {
   return getFolios().map((f) => ({ folio: f.slug }));
@@ -15,7 +16,14 @@ export function generateMetadata({
   params: { folio: string };
 }): Metadata {
   const folio = getFolio(params.folio);
-  return { title: folio ? folio.title : "Photography" };
+  if (!folio) return { title: "Photography" };
+  const cover = getPhoto(folio.coverPhoto);
+  return pageMeta({
+    title: folio.title,
+    description: folio.description,
+    path: `/photography/${folio.slug}`,
+    image: cover ? shareImage(cover.src) : undefined,
+  });
 }
 
 export default function FolioPage({ params }: { params: { folio: string } }) {

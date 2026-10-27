@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getResume } from "@/lib/resume";
 
-export const metadata: Metadata = { title: "Resume" };
+export const metadata: Metadata = pageMeta({
+  title: "Resume",
+  description:
+    "Experience, skills and education — Windows Server, Active Directory, Linux, Azure and VMware infrastructure engineer.",
+  path: "/resume",
+});
 
 export default function ResumePage() {
   const resume = getResume();

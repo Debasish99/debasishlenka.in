@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ExperimentCard } from "@/components/lab/ExperimentCard";
 import { getExperiments } from "@/lib/lab";
 
-export const metadata: Metadata = { title: "Lab" };
+export const metadata: Metadata = pageMeta({
+  title: "Lab",
+  description:
+    "Side projects, vibe-coded experiments and whatever I'm tinkering with — each with its own write-up.",
+  path: "/lab",
+});
 
 export default function LabPage() {
   const experiments = getExperiments();

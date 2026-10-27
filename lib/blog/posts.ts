@@ -21,6 +21,26 @@ export type Post = {
   readingTime: string;
 };
 
+/**
+ * Posts without a hand-written excerpt used to get no search-result summary
+ * (and an empty listing card). Derive a clean ~160-char one from the body.
+ */
+function deriveExcerpt(content: string, max = 160): string {
+  const text = content
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/^\s*[-*+]\s+/gm, "")
+    .replace(/[#*_`>~|]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${cut.slice(0, lastSpace > 80 ? lastSpace : max).replace(/[.,;:\-–—]$/, "")}…`;
+}
+
 function readPostFile(fileName: string): Post {
   const filePath = path.join(BLOG_DIR, fileName);
   const raw = fs.readFileSync(filePath, "utf-8");
@@ -31,6 +51,8 @@ function readPostFile(fileName: string): Post {
     slug: slugFromFile,
     ...data,
   });
+
+  if (!frontmatter.excerpt) frontmatter.excerpt = deriveExcerpt(content) || undefined;
 
   return {
     frontmatter,

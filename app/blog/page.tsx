@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getAllPosts } from "@/lib/blog/posts";
 
-export const metadata: Metadata = { title: "Blog" };
+export const metadata: Metadata = pageMeta({
+  title: "Blog",
+  description: "Notes on infrastructure, cloud, photography, and building this site.",
+  path: "/blog",
+});
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();
